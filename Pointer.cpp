@@ -9,7 +9,7 @@ void update(int *a, int *b) {
   *b = X;
 
   }
-
+  
   int main()
   {
     int a, b;
