@@ -4,7 +4,8 @@ def main():
 
 if __name__ == '__main__':
     main()
-------------
+'''
+#Solution 2:
 
 n = int(input())
 if n % 2 == 1:
@@ -15,3 +16,5 @@ elif n % 2 == 0 and 6 <= n <= 20:
     print("Weird")
 else:
     print("Not Weird")
+
+ '''
