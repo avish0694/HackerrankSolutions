@@ -78,38 +78,21 @@ typedef vector<int> vi;
 
 */
 
-
-int get_reverse(int n) { // Returns reverse of an integer
-    std::string s = std::to_string(n); // Convert integer to string
-    std::reverse(s.begin(), s.end()); // Reverse the string
-    int temp = std::stoi(s); // Convert string to integer
-    return (n < 0) ? -temp : temp; // Handle negative numbers
+using namespace std;
+int utopian(int n){
+    
+    return ~(~1<<(n>>1)) << n%2;
 }
 
-
-int main(int argc, char const *argv[])
-{
-  long long i, j, k;
-
-   int beauty = 0;
-
-   cin >> i >> j >> k;
-
-   for (int r = i; r <=j ; ++r)
-   {
-      long long w = get_reverse(r);
-
-      long long u = abs(r - w); 
-
-      if (u % k == 0) beauty++;
-  }
-
-   std::cout << beauty <<std::endl;
- 
-  return 0;
+int main() {
+   int t, s;
+    cin >>t;
+    while(t--){
+        cin >> s;
+            
+            cout << utopian(s)<<endl;
+    }
 }
-
-
 
 
 
